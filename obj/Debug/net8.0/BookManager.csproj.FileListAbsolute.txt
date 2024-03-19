@@ -12,3 +12,4 @@ C:\Users\USER\Desktop\SolutionBookManager\BookManager\obj\Debug\net8.0\refint\Bo
 C:\Users\USER\Desktop\SolutionBookManager\BookManager\obj\Debug\net8.0\BookManager.pdb
 C:\Users\USER\Desktop\SolutionBookManager\BookManager\obj\Debug\net8.0\BookManager.genruntimeconfig.cache
 C:\Users\USER\Desktop\SolutionBookManager\BookManager\obj\Debug\net8.0\ref\BookManager.dll
+C:\Users\USER\Desktop\SolutionBookManager\BookManager\obj\Debug\net8.0\BookManager.sourcelink.json

@@ -1,4 +1,5 @@
 
+using BookManager.DataServices;
 using BookManager.View;
 using BookManger.Models;
 using BookManger.View;
@@ -22,6 +23,7 @@ namespace BookManager.Controller
                 Rating = 5,
                 Reading = true
             };
+
             BookSingleView view = new BookSingleView(model);
             view.Render();
         }
