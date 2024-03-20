@@ -6,10 +6,10 @@ namespace BookManager.DataServices
 {
     public class Repository
     {
-        private readonly DataAccess _context;
+        protected readonly DataAccess _context;
         public Repository(DataAccess context)
         {
-            context = _context;
+            _context = context;
             _context.Load();
         }
 
