@@ -1,19 +1,15 @@
-using System.Drawing;
 using BookManager.Helpers;
-using BookManger.Models;
+using BookManager.Models;
+using BookManager;
 
 namespace BookManger.View
 {
-    public class BookSingleView
+    public class BookSingleView : ViewBase<Book>
     {
-        protected Book Model;
-
-        public BookSingleView(Book model)
-        {
-            Model = model;
-        }
-
-        public void Render()
+        // protected Book Model;
+        public BookSingleView(Book model) : base(model) { }
+      
+        public override void Render()
         {
             if (Model == null)
             {
@@ -23,18 +19,19 @@ namespace BookManger.View
 
             ViewHelp.WriteLine("BOOK DETAIL INFORMATION:", ConsoleColor.Green);
 
-            Console.WriteLine($"Title:      {Model.Title}");
-            Console.WriteLine($"Authors:    {Model.Authors}");
-            Console.WriteLine($"Publisher:  {Model.Publisher}");
-            Console.WriteLine($"Year:       {Model.Year}");
-            Console.WriteLine($"Edition:    {Model.Edition}");
-            Console.WriteLine($"ISBN:       {Model.ISBN}");
-            Console.WriteLine($"Description:{Model.Description}");
-            Console.WriteLine($"Tags:       {Model.Tags}");
-            Console.WriteLine($"Rating:     {Model.Rating}");
-            Console.WriteLine($"Reading:    {Model.Reading}");
-            Console.WriteLine($"File:       {Model.File}");
-            Console.WriteLine($"File Name:  {Model.FileName}");
+            var model = Model as Book;
+            Console.WriteLine($"Title:      {model.Title}");
+            Console.WriteLine($"Authors:    {model.Authors}");
+            Console.WriteLine($"Publisher:  {model.Publisher}");
+            Console.WriteLine($"Year:       {model.Year}");
+            Console.WriteLine($"Edition:    {model.Edition}");
+            Console.WriteLine($"ISBN:       {model.ISBN}");
+            Console.WriteLine($"Description:{model.Description}");
+            Console.WriteLine($"Tags:       {model.Tags}");
+            Console.WriteLine($"Rating:     {model.Rating}");
+            Console.WriteLine($"Reading:    {model.Reading}");
+            Console.WriteLine($"File:       {model.File}");
+            Console.WriteLine($"File Name:  {model.FileName}");
         }
     }
 }

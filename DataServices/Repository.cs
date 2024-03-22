@@ -1,6 +1,4 @@
-using System.Xml.Schema;
-using BookManger.Models;
-using BookManger.View;
+using BookManager.Models;
 
 namespace BookManager.DataServices
 {

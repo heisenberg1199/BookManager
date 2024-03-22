@@ -1,12 +1,12 @@
 
 using BookManager.DataServices;
 using BookManager.View;
-using BookManger.Models;
+using BookManager.Models;
 using BookManger.View;
 
 namespace BookManager.Controller
 {
-    public class BookController
+    public class BookController : ControllerBase
     {
         protected Repository Repository;
 
@@ -15,7 +15,7 @@ namespace BookManager.Controller
             Repository = new Repository(context);
         }
 
-        public void Single(int id)
+        public void Single(int id, string path = "")
         {
             // Book model = new Book() {
             //     Id = 1,
@@ -31,21 +31,41 @@ namespace BookManager.Controller
             //     Reading = true
             // };
             var model = Repository.Select(id);
-            BookSingleView view = new BookSingleView(model);
-            view.Render();
+            // BookSingleView view = new BookSingleView(model);
+            // if(!String.IsNullOrEmpty(path))
+            // {
+            //     view.WriteToFileJson(path);
+            //     return;
+            // }
+            // view.Render();
+            Render(new BookSingleView(model), path);
         }
-        public void Create()
+        public void Create(Book book = null)
         {
-            BookCreateView view = new BookCreateView();
-            view.Render();
+            // BookCreateView view = new BookCreateView();
+            // view.Render();
+            if (book == null)
+            {
+                Render(new BookCreateView());
+                return;
+            }
+            Repository.InsertBook(book);
+            Success("Book created!");
         }
-        public void Update(int id)
+        public void Update(int id, Book book = null)
         {
-            var model =  Repository.Select(id);
-            BookUpdateView view = new BookUpdateView(model);
-            view.Render();
+            // BookUpdateView view = new BookUpdateView(model);
+            // view.Render();
+            if (book == null)
+            {
+                var model =  Repository.Select(id);
+                Render(new BookUpdateView(model));
+                return;
+            }
+            Repository.UpdateBook(id, book);
+            Success("Book updated!");
         }
-        public void List()
+        public void List(string path = "")
         {
             // Book[] model = {
             //     new Book() { Title = "Title 1", Authors = "Authors 1"},
@@ -57,8 +77,14 @@ namespace BookManager.Controller
             //     new Book() { Title = "Title 7", Authors = "Authors 7"},
             // };
             var model = Repository.Select();
-            BookListView view = new BookListView(model);
-            view.Render();
+            // BookListView view = new BookListView(model);
+            // if (!String.IsNullOrEmpty(path))
+            // {
+            //     view.WriteToFileJson(path);
+            //     return;
+            // }
+            // view.Render();
+            Render(new BookListView(model), path);
         }
     }
 }

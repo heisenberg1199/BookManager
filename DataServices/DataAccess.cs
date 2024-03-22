@@ -1,4 +1,4 @@
-using BookManger.Models;
+using BookManager.Models;
 
 namespace BookManager.DataServices
 {

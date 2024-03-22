@@ -1,6 +1,5 @@
-using System;
 
-namespace BookManger.Models
+namespace BookManager.Models
 {
     /// <summary>
     /// class lưu trữ thông tin về sách

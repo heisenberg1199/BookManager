@@ -1,23 +1,12 @@
-﻿using BookManager.Controller;
-using BookManager.DataServices;
-using BookManager.Helpers;
-using BookManger.Models;
-
+﻿using BookManager.Helpers;
 
 namespace BookManager
 {
-    public class Program
+    public partial class Program
     {
         public static void Main(string[] args)
         {
-            Console.Clear();
-
-            DataAccess dataAccess = new DataAccess();
-            BookController controller = new BookController(dataAccess);
-
-            Router.Instance.Register("about", About);
-            Router.Instance.Register("help", Help);
-
+            Config();
             while (true)
             {
                 ViewHelp.Write("Request >>> ", ConsoleColor.Green);
