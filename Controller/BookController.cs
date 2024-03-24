@@ -3,6 +3,7 @@ using BookManager.DataServices;
 using BookManager.View;
 using BookManager.Models;
 using BookManger.View;
+using Microsoft.VisualBasic;
 
 namespace BookManager.Controller
 {
@@ -85,6 +86,24 @@ namespace BookManager.Controller
             // }
             // view.Render();
             Render(new BookListView(model), path);
+        }
+        public void Filter(string key)
+        {
+            var model = Repository.Select(key);
+            if (model.Length == 0)
+                Info("No match book found!");
+            else
+                Render(new BookListView(model));
+        }
+        public void Delete(int id, bool deleteSucess = false)
+        {
+            if (deleteSucess == false)
+            {
+                var model = Repository.Select(id);
+                Confirm($"Do you want to delete this book ({model.Title}) ?", $"do delete ? id = {model.Id}");
+            }
+            Repository.DeleteBook(id);
+            Success("Book deleted!");
         }
     }
 }

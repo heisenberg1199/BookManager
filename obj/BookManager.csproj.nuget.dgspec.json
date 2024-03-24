@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\SolutionBookManager\\BookManager\\BookManager.csproj": {}
+    "/Users/buingoctuongvi/Desktop/SolutionBookManager/BookManager/BookManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\SolutionBookManager\\BookManager\\BookManager.csproj": {
+    "/Users/buingoctuongvi/Desktop/SolutionBookManager/BookManager/BookManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\SolutionBookManager\\BookManager\\BookManager.csproj",
+        "projectUniqueName": "/Users/buingoctuongvi/Desktop/SolutionBookManager/BookManager/BookManager.csproj",
         "projectName": "BookManager",
-        "projectPath": "C:\\Users\\USER\\Desktop\\SolutionBookManager\\BookManager\\BookManager.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\SolutionBookManager\\BookManager\\obj\\",
+        "projectPath": "/Users/buingoctuongvi/Desktop/SolutionBookManager/BookManager/BookManager.csproj",
+        "packagesPath": "/Users/buingoctuongvi/.nuget/packages/",
+        "outputPath": "/Users/buingoctuongvi/Desktop/SolutionBookManager/BookManager/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/buingoctuongvi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
